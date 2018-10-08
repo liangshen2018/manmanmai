@@ -1,0 +1,27 @@
+
+
+/*html根字体大小改变*/
+ 
+ @base : 100;
+ 
+ @des : 750;
+
+.size(@val:320px){
+  @media screen and (min-width:@val) {
+    html {
+      font-size: @base / @des * @val
+    }
+  }
+}
+
+
+.size(320px);
+.size(380px);
+.size(440px);
+.size(500px);
+.size(560px);
+.size(600px);
+.size(660px);
+.size(720px);
+.size(750px);
+
