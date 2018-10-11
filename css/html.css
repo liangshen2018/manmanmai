@@ -1,0 +1,121 @@
+/*html根字体大小改变*/
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 42.66666667px;
+  }
+}
+@media screen and (min-width: 340px) {
+  html {
+    font-size: 45.33333333px;
+  }
+}
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 380px) {
+  html {
+    font-size: 50.66666667px;
+  }
+}
+@media screen and (min-width: 400px) {
+  html {
+    font-size: 53.33333333px;
+  }
+}
+@media screen and (min-width: 420px) {
+  html {
+    font-size: 56px;
+  }
+}
+@media screen and (min-width: 440px) {
+  html {
+    font-size: 58.66666667px;
+  }
+}
+@media screen and (min-width: 460px) {
+  html {
+    font-size: 61.33333333px;
+  }
+}
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 64px;
+  }
+}
+@media screen and (min-width: 500px) {
+  html {
+    font-size: 66.66666667px;
+  }
+}
+@media screen and (min-width: 520px) {
+  html {
+    font-size: 69.33333333px;
+  }
+}
+@media screen and (min-width: 540px) {
+  html {
+    font-size: 72px;
+  }
+}
+@media screen and (min-width: 560px) {
+  html {
+    font-size: 74.66666667px;
+  }
+}
+@media screen and (min-width: 580px) {
+  html {
+    font-size: 77.33333333px;
+  }
+}
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 80px;
+  }
+}
+@media screen and (min-width: 620px) {
+  html {
+    font-size: 82.66666667px;
+  }
+}
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 85.33333333px;
+  }
+}
+@media screen and (min-width: 660px) {
+  html {
+    font-size: 88px;
+  }
+}
+@media screen and (min-width: 680px) {
+  html {
+    font-size: 90.66666667px;
+  }
+}
+@media screen and (min-width: 700px) {
+  html {
+    font-size: 93.33333333px;
+  }
+}
+@media screen and (min-width: 720px) {
+  html {
+    font-size: 96px;
+  }
+}
+@media screen and (min-width: 735px) {
+  html {
+    font-size: 98px;
+  }
+}
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 100px;
+  }
+}

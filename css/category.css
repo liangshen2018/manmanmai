@@ -1,0 +1,41 @@
+.cate_title {
+  margin-bottom: .55rem;
+}
+.cate_title .title:first-child .titleLink {
+  border-top: 2px solid #d2d2d2;
+}
+.cate_title .titleLink {
+  display: block;
+  height: .8rem;
+  line-height: .8rem;
+  font-size: .28rem;
+  color: black;
+  border-bottom: 2px solid #d2d2d2;
+  border-radius: .05rem;
+  background-color: #efefef;
+  padding-left: .36rem;
+  font-weight: bold;
+  position: relative;
+}
+.cate_title .titleLink .img {
+  position: absolute;
+  width: 34px;
+  height: 22px;
+  right: .3rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.cate_title li {
+  float: left;
+  width: 33.3%;
+}
+.cate_title li a {
+  display: block;
+  height: .8rem;
+  line-height: .8rem;
+  text-align: center;
+  font-size: .24rem;
+  color: #270a00;
+  border-right: 2px solid #d2d2d2;
+  border-bottom: 2px solid #d2d2d2;
+}

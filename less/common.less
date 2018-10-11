@@ -1,4 +1,4 @@
-@import 'normalize';
+@import 'base';
 
 @import 'html';
 
@@ -6,13 +6,139 @@
   width: 100%;
   max-width: 750px;
   min-width: 320px;
-  background-color: pink;
   margin: 0 auto;
-  height: 2000px;
+  background-color: #fff;
+}
 
-  .mmm-header {
-    width: 100%;
-    height: .98rem;
-    background-color: #ff841d;
+/*顶部*/ 
+.mmm-header {
+  width: 100%;
+  height: .98rem;
+  background-color: #ff841d;
+
+  .left {
+    height: 100%;
+
+    a {
+      display: block;
+      height: 100%;
+      padding: .24rem .3rem;
+      box-sizing: border-box;
+      
+
+      img {
+        height: 0.5rem;
+        width: 4rem;
+      }
+    }
   }
+
+  .right {
+    height: 100%;
+
+    a {
+      display: block;
+      height: 100%;
+      padding: .14rem;
+      box-sizing: border-box;
+      img {
+        width: .7rem;
+        height: 0.7rem;
+      }
+    }
+  }
+}
+
+/*搜索框*/ 
+
+.mmm-search {
+  height: 1rem;
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+ .box {
+   width: 100%;
+   height: 1rem;
+     box-sizing: border-box;
+     padding-right: 2rem;
+     overflow: hidden;
+   input {
+     height: .6rem;
+     width: 100%;
+     font-size: .28rem;
+     border: none;
+     background-color: #f1f1f1;
+     line-height: .6rem;
+     border-radius: .6rem;
+     margin: .2rem;
+     text-indent: .2rem;
+     display: block;
+   }
+ }
+ .btn {
+   position: absolute;
+   right: .2rem;
+   top: .2rem;
+   width: 1.3rem;
+   height: .6rem;
+   font-size: .28rem ;
+   font-weight: bold;
+   color: #fff;
+   line-height: .6rem;
+   text-align: center;
+   background-color: #ff841d;
+   border-radius: .6rem;
+ }
+}
+
+
+/*底部*/ 
+
+.mmm-footer {
+  width: 100%;
+  height: 2.44rem;
+  padding-top: .5rem;
+  background-color: #efefef;
+
+  .nav {
+     height: 0.68rem;
+     border-top: 2px solid #d2d2d2;
+     border-bottom: 2px solid #d2d2d2;
+     line-height: 0.68rem;
+
+     a {
+       display: block;
+       width: 33.33%;
+       height: 100%;
+       text-align: center;
+       float: left;
+       font-size: .3rem;
+       color: #100b06;
+       border-right: 2px solid #d2d2d2;
+       &:last-child {
+         border: none;
+         position: relative;
+         img {
+           position: absolute;
+           width: 0.25rem;
+           height: 0.3rem;
+           left: .4rem;
+           top:50%;
+           transform: translateY(-50%)
+         }
+       }
+     }
+  }
+
+  .note {
+    text-align: center;
+    padding-top: .35rem;
+    .red {
+      color: #ff7c8f;
+    }
+    .hei {
+      color: #100b06;
+    }
+  }
+
 }

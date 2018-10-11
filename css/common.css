@@ -1,12 +1,32 @@
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-body {
-  margin: 0;
-}
+@charset "utf-8";
+/* 初始化 */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
 article,
 aside,
 details,
@@ -14,167 +34,101 @@ figcaption,
 figure,
 footer,
 header,
-hgroup,
-main,
 menu,
 nav,
-section,
-summary {
-  display: block;
+section {
+  margin: 0;
+  padding: 0;
+  /* css3 盒子模型, 好处: 设置宽高后, 如果有padding或者border 自动内减 */
+  box-sizing: border-box;
 }
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  vertical-align: baseline;
+body {
+  font: 12px/1.5 'Microsoft YaHei', '宋体', Tahoma, Arial, sans-serif;
+  color: #555;
+  background-color: #F7F7F7;
 }
-audio:not([controls]) {
-  display: none;
-  height: 0;
+/*去除边框*/
+fieldset,
+img,
+input,
+button,
+textarea {
+  border: none;
+  /*去除的蓝色小边框*/
+  outline-style: none;
 }
-[hidden],
-template {
-  display: none;
+/*禁止表单域缩放*/
+textarea {
+  resize: none;
 }
 a {
-  background-color: transparent;
+  text-decoration: none;
+  color: #969696;
+  /* 取消链接高亮 tap 轻触  */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-a:active,
-a:hover {
-  outline: 0;
-}
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-b,
-strong {
-  font-weight: bold;
-}
-dfn {
-  font-style: italic;
-}
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-mark {
-  background: #ff0;
-  color: #000;
-}
-small {
-  font-size: 80%;
-}
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sup {
-  top: -0.5em;
-}
-sub {
-  bottom: -0.25em;
-}
+/* 图片自适应 */
 img {
-  border: 0;
+  width: 100%;
+  /*解决图片底部对齐问题*/
+  display: block;
+  border: none;
 }
-svg:not(:root) {
+ul,
+ol {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 100%;
+}
+/* 废物利用 */
+em,
+i {
+  font-style: normal;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  /* 最关键的清除浮动 */
+  clear: both;
+}
+/*单行溢出*/
+.one-txt-cut {
   overflow: hidden;
+  /* 规定段落中的文本不换行 */
+  white-space: nowrap;
+  /* 溢出的文本以省略号显示 */
+  text-overflow: ellipsis;
 }
-figure {
-  margin: 1em 40px;
+/*多行溢出*/
+.txt-cut {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
-hr {
-  box-sizing: content-box;
-  height: 0;
-}
-pre {
-  overflow: auto;
-}
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit;
-  font: inherit;
-  margin: 0;
-}
-button {
-  overflow: visible;
-}
-button,
-select {
-  text-transform: none;
-}
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer;
-}
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-input {
-  line-height: normal;
-}
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-input[type="search"] {
-  -webkit-appearance: textfield;
-  box-sizing: content-box;
-}
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-legend {
-  border: 0;
-  padding: 0;
-}
-textarea {
-  overflow: auto;
-}
-optgroup {
-  font-weight: bold;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-td,
-th {
-  padding: 0;
+/* 复用的精灵图样式 */
+.jd_sprite {
+  background: url("../images/jd-sprites.png") no-repeat 0 0;
+  background-size: 200px 200px;
 }
 /*html根字体大小改变*/
 @media screen and (min-width: 320px) {
@@ -182,9 +136,34 @@ th {
     font-size: 42.66666667px;
   }
 }
+@media screen and (min-width: 340px) {
+  html {
+    font-size: 45.33333333px;
+  }
+}
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 50px;
+  }
+}
 @media screen and (min-width: 380px) {
   html {
     font-size: 50.66666667px;
+  }
+}
+@media screen and (min-width: 400px) {
+  html {
+    font-size: 53.33333333px;
+  }
+}
+@media screen and (min-width: 420px) {
+  html {
+    font-size: 56px;
   }
 }
 @media screen and (min-width: 440px) {
@@ -192,9 +171,29 @@ th {
     font-size: 58.66666667px;
   }
 }
+@media screen and (min-width: 460px) {
+  html {
+    font-size: 61.33333333px;
+  }
+}
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 64px;
+  }
+}
 @media screen and (min-width: 500px) {
   html {
     font-size: 66.66666667px;
+  }
+}
+@media screen and (min-width: 520px) {
+  html {
+    font-size: 69.33333333px;
+  }
+}
+@media screen and (min-width: 540px) {
+  html {
+    font-size: 72px;
   }
 }
 @media screen and (min-width: 560px) {
@@ -202,9 +201,24 @@ th {
     font-size: 74.66666667px;
   }
 }
+@media screen and (min-width: 580px) {
+  html {
+    font-size: 77.33333333px;
+  }
+}
 @media screen and (min-width: 600px) {
   html {
     font-size: 80px;
+  }
+}
+@media screen and (min-width: 620px) {
+  html {
+    font-size: 82.66666667px;
+  }
+}
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 85.33333333px;
   }
 }
 @media screen and (min-width: 660px) {
@@ -212,9 +226,24 @@ th {
     font-size: 88px;
   }
 }
+@media screen and (min-width: 680px) {
+  html {
+    font-size: 90.66666667px;
+  }
+}
+@media screen and (min-width: 700px) {
+  html {
+    font-size: 93.33333333px;
+  }
+}
 @media screen and (min-width: 720px) {
   html {
     font-size: 96px;
+  }
+}
+@media screen and (min-width: 735px) {
+  html {
+    font-size: 98px;
   }
 }
 @media screen and (min-width: 750px) {
@@ -226,12 +255,123 @@ th {
   width: 100%;
   max-width: 750px;
   min-width: 320px;
-  background-color: pink;
   margin: 0 auto;
-  height: 2000px;
+  background-color: #fff;
 }
-.mmm-container .mmm-header {
+/*顶部*/
+.mmm-header {
   width: 100%;
   height: .98rem;
   background-color: #ff841d;
+}
+.mmm-header .left {
+  height: 100%;
+}
+.mmm-header .left a {
+  display: block;
+  height: 100%;
+  padding: .24rem .3rem;
+  box-sizing: border-box;
+}
+.mmm-header .left a img {
+  height: 0.5rem;
+  width: 4rem;
+}
+.mmm-header .right {
+  height: 100%;
+}
+.mmm-header .right a {
+  display: block;
+  height: 100%;
+  padding: .14rem;
+  box-sizing: border-box;
+}
+.mmm-header .right a img {
+  width: .7rem;
+  height: 0.7rem;
+}
+/*搜索框*/
+.mmm-search {
+  height: 1rem;
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+}
+.mmm-search .box {
+  width: 100%;
+  height: 1rem;
+  box-sizing: border-box;
+  padding-right: 2rem;
+  overflow: hidden;
+}
+.mmm-search .box input {
+  height: .6rem;
+  width: 100%;
+  font-size: .28rem;
+  border: none;
+  background-color: #f1f1f1;
+  line-height: .6rem;
+  border-radius: .6rem;
+  margin: .2rem;
+  text-indent: .2rem;
+  display: block;
+}
+.mmm-search .btn {
+  position: absolute;
+  right: .2rem;
+  top: .2rem;
+  width: 1.3rem;
+  height: .6rem;
+  font-size: .28rem ;
+  font-weight: bold;
+  color: #fff;
+  line-height: .6rem;
+  text-align: center;
+  background-color: #ff841d;
+  border-radius: .6rem;
+}
+/*底部*/
+.mmm-footer {
+  width: 100%;
+  height: 2.44rem;
+  padding-top: .5rem;
+  background-color: #efefef;
+}
+.mmm-footer .nav {
+  height: 0.68rem;
+  border-top: 2px solid #d2d2d2;
+  border-bottom: 2px solid #d2d2d2;
+  line-height: 0.68rem;
+}
+.mmm-footer .nav a {
+  display: block;
+  width: 33.33%;
+  height: 100%;
+  text-align: center;
+  float: left;
+  font-size: .3rem;
+  color: #100b06;
+  border-right: 2px solid #d2d2d2;
+}
+.mmm-footer .nav a:last-child {
+  border: none;
+  position: relative;
+}
+.mmm-footer .nav a:last-child img {
+  position: absolute;
+  width: 0.25rem;
+  height: 0.3rem;
+  left: .4rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.mmm-footer .note {
+  text-align: center;
+  padding-top: .35rem;
+}
+.mmm-footer .note .red {
+  color: #ff7c8f;
+}
+.mmm-footer .note .hei {
+  color: #100b06;
 }
