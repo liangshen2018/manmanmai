@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="css/moneyctrl.css">
+  <link rel="stylesheet" href="./css/moneyctrlProduct.css">
 </head>
 <body>
   <div class="mmm-container">
@@ -19,16 +19,17 @@
         <a href="#"><img src="images/header_app.png" alt=""></a>
       </div>
       <h3>省钱控-最新优惠</h3>
+
     </div>
 
 
     <!-- 动态获取数据 -->
-    <div class="mmm-product">
-
-        <div class="info" id="product">
-          <!--坑 -->
-        </div>   
-      </div>
+    <div class="product_main">
+       <div class="jieshao">
+        
+       </div>
+       <div class="pinglun"></div>
+    </div>
     
     <div class="mmm-footer">
       <div class="nav">
@@ -46,30 +47,26 @@
   </div>
 </body>
 
-<script type="text/html" id="proTmp">
-  {{each result v i}}
-  <div class="info_1">
-       <a href="moneyctrlProduct.html?productid={{v.productId}}" class="link ">
-          <div class="left fl">
-              {{@v.productImg2}}
-          </div>
-          <div class="right">
-            <div class="top">
-              <span>{{v.productName}} </span>
-              <span>{{v.productPinkage}}</span>
-            </div>
-            <div class="bot">
-              <span class="fl">{{v.productFrom}} | {{v.productTime}}</span>
-              <span class="fr">{{v.productComCount}}</span>
-            </div>
-          </div>
-       </a>
-    </div>
-{{/each}}
+<script type="text/html" id="jsTmp">
+  <h3>{{result[0].productName}}</h3>
+  <div class="tip">
+     <span>{{result[0].productFrom}}</span>
+     <span>{{result[0].productTime}}</span>
+     <span>{{result[0].productTips}}</span>
+   </div>
+   <div class="info clearfix">
+     <div class="imgsm fr">{{@result[0].productImg2}}</div>
+     
+     <p>{{result[0].productInfo2}}</p>
+     
+   </div>
+   <div class="imglg">{{@result[0].productImg2}}</div> 
+   <div class="productCity"></div>
+   <a class="buy" href="#">前往购买</a> 
 </script>
 
 <script src="./lib/jquery/jquery.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/moneyctrl.js"></script>
+<script src="./js/moneyctrlProduct.js"></script>
 </html>

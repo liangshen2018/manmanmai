@@ -16,6 +16,9 @@
       console.log(res);
       
       $('#menu').html(template('tmp',res))
+      $('#menu .img').each(function (i,ele) {
+        $(this).html($(this).text())
+      })
     }
   }
 
@@ -33,7 +36,12 @@ $(function () {
     url:'http://127.0.0.1:9090/api/getmoneyctrl',
     dataType:'json',
     success: function (info) {
+      console.log(info);
+      
       $('#product').html(template('tmpProduct',info))
+      $('#product .info_1 .left').each(function (i,ele) {
+        $(this).html($(this).text())
+      })
     }
   })
 

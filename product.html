@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="css/category.css">
+  <link rel="stylesheet" href="css/product.css">
 </head>
 <body>
   <div class="mmm-container">
@@ -26,11 +26,32 @@
       </div>
       <div class="btn">搜索</div>
     </div>
-
-    <!-- 分类标题 -->
-    <div class="cate_title">
-      <!-- 渲染 -->
+   
+    <div class="product">
+      <div class="title"></div>
+      <div class="product_content">
+        <div class="tip">
+            <p>双11预售：日本进口尤妮佳/Moony婴儿纸尿裤M64*3包 </p>
+          <div class="img"><img src="images/productctrl.jpg" alt=""></div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="category.html">比价搜索</a></li>
+                <li><a href="#">产品参数</a></li>
+                <li><a class="pinglun" href="#">ssss</a></li>
+            </ul>
+        </div>
+        <div class="table"></div>
+        <h3>实际价格</h3>
+        <div class="pingjia">
+          <h3>网友评价</h3>
+          <div class="info">
+            <!-- 模板渲染 -->
+          </div>
+        </div>
+      </div>
     </div>
+
 
     <!-- 底部 -->
     <div class="mmm-footer">
@@ -47,32 +68,38 @@
       </div>
     </div>
   </div>
+
+
+
 </body>
+ 
 <script type="text/html" id="titleTmp">
-  <div>
+  <a href="index.html">首页></a>
+  <a href="categoryList.html?id={{result[0].categoryId}}">{{result[0].category}}></a>
+  <a class="deail" href="#"></a>
+  <button>筛选</button>
+</script>
+
+<script type="text/html" id="infoTmp">
+  <ul>
     {{each result v i}}
-      <div class="title">
-        <a class="titleLink" data-id={{v.titleId}} href="#">{{v.title}} 
-          <div class="img"><img src="./images/down.png" alt="">
-          </div>
-        </a>
-
-      </div>
-    {{/each}}
-    </div>
-</script>
-
-<script type="text/html" id="listTmp">
-
-  <ul class="clearfix" style="display:none">
-    {{each result v i}}        
-      <li><a href="categoryList.html?id={{v.categoryId}}">{{v.category}}</a></li>
+      <li>
+        <div class="top clearfix">
+          <span class="fl">{{v.comName}}</span>
+          <span class="fr">{{v.comTime}}</span>                 
+        </div>
+        <div class="from clearfix"><span class="fr">{{v.comFrom}}</span></div>
+        <p>{{v.comContent}}</p>
+      </li>
       {{/each}}
-  </ul>
-
+      <li>
+        <a href="#">查看更多评价</a>
+      </li>
+    </ul>
 </script>
+
 <script src="./lib/jquery/jquery.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/category.js"></script>
+<script src="./js/product.js"></script>
 </html>

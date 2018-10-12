@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="css/baicaijia.css">
+</head>
+<body>
+  <div class="mmm-container">
+    <!-- 头部 -->
+    <div class="mmm-header">
+      <div class="left fl">
+        <a class="icon_back" href="javascript:history.back()"></a>
+      </div>
+      <div class="right fr">
+        <a href="#"><img src="images/header_app.png" alt=""></a>
+      </div>
+      <h3>白菜价-淘宝内部券</h3>
+    </div>
+
+
+    <!-- 动态获取数据 -->
+    <div class="nav">
+       
+       <ul>
+         <li><a href="#">全部</a></li>
+       </ul>
+    </div>
+    <div class="mmm-product">
+
+        <div class="info" id="product">
+          <!--坑 -->
+        </div>   
+      </div>
+    
+    <div class="mmm-footer">
+      <div class="nav">
+        <a href="#">登入</a>
+        <a href="#">注册</a>
+        <a id="top" href="#"><img src="images/top.jpg" alt=""><span>返回顶部</span></a>
+      </div>
+      <div class="note">
+        <a class="red" href="#">手机APP下载</a>
+        <a class="hei" href="#">慢慢买手机版</a>
+        <a href="#">--掌上比价平台</a>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script type="text/html" id="navTmp">
+  
+</script>
+
+
+<script type="text/html" id="proTmp">
+  {{each result v i}}
+  <div class="info_1">
+       <a href="moneyctrlProduct.html?productid={{v.productId}}" class="link ">
+          <div class="left fl">
+              {{@v.productImg2}}
+          </div>
+          <div class="right">
+            <div class="top">
+              <span>{{v.productName}} </span>
+              <span>{{v.productPinkage}}</span>
+            </div>
+            <div class="bot">
+              <span class="fl">{{v.productFrom}} | {{v.productTime}}</span>
+              <span class="fr">{{v.productComCount}}</span>
+            </div>
+          </div>
+       </a>
+    </div>
+{{/each}}
+</script>
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/baicaijia.js"></script>
+</html>

@@ -1,0 +1,105 @@
+.mmm-header .icon_back {
+  width: 1rem;
+  background: url('../images/icon_bar.png') -2.06rem -0.2rem no-repeat;
+  background-size: 4.4rem 2.64rem;
+  background-clip: content-box;
+  background-origin: content-box;
+}
+.mmm-header h3 {
+  overflow: hidden;
+  height: 100%;
+  line-height: .98rem;
+  font-size: .4rem;
+  text-align: center;
+  color: #fff;
+}
+.product_main {
+  padding: .15rem;
+}
+.product_main .jieshao h3 {
+  padding: .1rem 0;
+  font-size: .32rem;
+  color: black;
+  text-align: left;
+  font-weight: bold;
+}
+.product_main .jieshao .tip span {
+  font-size: .2rem;
+  margin-right: .1rem;
+}
+.product_main .jieshao .info p {
+  font-size: .3rem;
+  line-height: .4rem;
+  padding: .2rem 0;
+}
+.product_main .jieshao .info img {
+  width: 2.5rem;
+  height: 3.2rem;
+}
+.product_main .jieshao .buy {
+  display: block;
+  width: 88%;
+  height: 0.85rem;
+  margin: .3rem auto;
+  font-size: .3rem;
+  text-align: center;
+  line-height: .85rem;
+  background-color: #ff9000;
+  border-radius: .1rem;
+  color: #fff;
+}
+.product_main .pinglun {
+  margin-top: .3rem;
+  font-size: .28rem;
+  color: black;
+}
+.product_main .pinglun .tit {
+  height: 0.7rem;
+  line-height: 0.7rem;
+}
+.product_main .pinglun .reply {
+  border: 2px solid #e7e5e3;
+}
+.product_main .pinglun .reply #ctl00_ContentBody_txt_nr {
+  width: 100%;
+  height: 1.5rem;
+}
+.product_main .pinglun .reply .ctrl {
+  height: .44rem;
+  border-top: 2px solid #e7e5e3;
+}
+.product_main .pinglun .reply .ctrl input {
+  height: .44rem;
+  float: right;
+  background-color: orange;
+  font-size: .24rem;
+  color: #fff;
+  padding: 0 .1rem;
+}
+.product_main .pinglun .list li {
+  padding: .3rem .1rem;
+}
+.product_main .pinglun .list .userimg {
+  width: 1rem;
+  height: 100%;
+  float: left;
+}
+.product_main .pinglun .list .userimg img {
+  width: 0.8rem;
+  height: 0.8rem;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.product_main .pinglun .list .con {
+  overflow: hidden;
+}
+.product_main .pinglun .list .con .name .username {
+  float: left;
+}
+.product_main .pinglun .list .con .name .time {
+  float: right;
+}
+.product_main .pinglun .list .con .content img {
+  display: inline-block;
+  width: 0.2rem;
+}

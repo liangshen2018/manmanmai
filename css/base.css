@@ -1,38 +1,72 @@
 @charset "utf-8";
-
 /* 初始化 */
-body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
   margin: 0;
   padding: 0;
   /* css3 盒子模型, 好处: 设置宽高后, 如果有padding或者border 自动内减 */
   box-sizing: border-box;
 }
-
 body {
   font: 12px/1.5 'Microsoft YaHei', '宋体', Tahoma, Arial, sans-serif;
   color: #555;
   background-color: #F7F7F7;
 }
-
 /*去除边框*/
-fieldset, img, input, button, textarea {
+fieldset,
+img,
+input,
+button,
+textarea {
   border: none;
   /*去除的蓝色小边框*/
   outline-style: none;
 }
-
 /*禁止表单域缩放*/
 textarea {
   resize: none;
 }
-
 a {
   text-decoration: none;
   color: #969696;
   /* 取消链接高亮 tap 轻触  */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
 /* 图片自适应 */
 img {
   width: 100%;
@@ -40,41 +74,41 @@ img {
   display: block;
   border: none;
 }
-
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-decoration: none;
   font-weight: normal;
   font-size: 100%;
 }
-
 /* 废物利用 */
-em, i {
+em,
+i {
   font-style: normal;
 }
-
 .fl {
   float: left;
 }
-
 .fr {
   float: right;
 }
-
 /*清除浮动*/
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
   content: "";
   display: table;
 }
-
 .clearfix:after {
   /* 最关键的清除浮动 */
   clear: both;
 }
-
 /*单行溢出*/
 .one-txt-cut {
   overflow: hidden;
@@ -83,7 +117,6 @@ em, i {
   /* 溢出的文本以省略号显示 */
   text-overflow: ellipsis;
 }
-
 /*多行溢出*/
 .txt-cut {
   overflow: hidden;

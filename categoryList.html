@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/categoryList.css">
 </head>
 <body>
   <div class="mmm-container">
@@ -27,32 +27,16 @@
       <div class="btn">搜索</div>
     </div>
 
-    <!-- 动态获取导航数据 -->
-    <div class="mmm-menu">
-      <ul class="clearfix" id="menu">
+   <div class="cate_list">
+     <div class="title">
 
-        <li>
-          <a href="#">
-            <img src="./images/ic_bcj.png" alt="">
-            <p>比价</p>
-          </a>
-        </li>
-      </ul>
+     </div>
+     <div class="product">
+         <!-- 模板渲染 -->
+     </div>
+   </div>
 
-    </div>
-    <div class="mmm-product">
-      <div class="tuij">
-        <p>超值折扣推荐</p>
-        <a class="arrow-right" href="#"><img src="images/more.png" alt=""></a>
-      </div>
-      <div class="info" id="product">
-        <!-- keng -->
-      </div>
-      <div class="paih">
-        <p>品牌排行</p>
-        <a class="arrow-right" href="#"><img src="images/more.png" alt=""></a>
-      </div>      
-    </div>
+    <!-- 底部 -->
     <div class="mmm-footer">
       <div class="nav">
         <a href="#">登入</a>
@@ -68,42 +52,35 @@
     </div>
   </div>
 </body>
-<script type="text/html" id="tmp">
-
-  {{each result v i}}
-  
-  <li>
-    <a href={{v.titlehref}}>
-      <div class="img">{{v.img}}</div>
-      <p>{{v.name}}</p>
-    </a>
-  </li>
-{{/each}}
+ 
+<script type="text/html" id="titleTmp">
+  <a href="index.html">首页></a>
+  <a href="category.html">全部分类></a>
+  <a href="categoryList.html?id={{result[0].categoryId}}">{{result[0].category}}></a>
+  <button>筛选</button>
 </script>
 
-<script type="text/html" id="tmpProduct">
-
-  {{each result v i}}
-  <div class="info_1">
-     <a class="link" href="moneyctrlProduct.html?productid={{v.productId}}">
-        <div class="left fl">
-            {{v.productImg2}}
-          </div>
+<script type="text/html" id="proTmp">
+  <ul>
+    {{each result v i}}
+      <li>
+        <a href="product.html?id={{v.productId}}&brandName={{v.brandName}}&productCom={{v.productCom}}">
+          <div class="left fl">{{v.productImg}}</div>
           <div class="right">
-            <div class="top">
-              <span>{{v.productName}} </span>
-              <span>{{v.productPinkage}}</span>
-            </div>
-            <div class="bot">
-              <span>{{v.productFrom}} | {{v.productTime}}</span>
-            </div>
+            <p>{{v.productName}}</p>
+            <div class="price">{{v.productPrice}}</div>
+            <span>{{v.productQuote}}</span>
+            <span>{{v.productCom}}</span>
           </div>
-     </a>
-    </div>
-   {{/each}}
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+
+
 </script>
 <script src="./lib/jquery/jquery.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/index.js"></script>
+<script src="./js/categoryList.js"></script>
 </html>

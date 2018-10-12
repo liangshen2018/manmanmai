@@ -1,0 +1,100 @@
+.title {
+  height: .75rem ;
+  background-color: #f1f1f1;
+  border: 2px solid #d2d2d2;
+  position: relative;
+  color: black;
+  font-size: .32rem;
+  line-height: .7rem;
+  padding-left: .1rem;
+}
+.title a {
+  display: inline-block;
+  color: black;
+}
+.title button {
+  color: black;
+  font-size: .32rem;
+  width: 1.2rem;
+  height: 0.55rem;
+  position: absolute;
+  right: .15rem;
+  top: .08rem;
+  background-image: linear-gradient(180deg, #ececec, #fff);
+  border-radius: .1rem;
+  box-shadow: 0 0 2px 2px #ccc;
+  cursor: pointer;
+}
+.product .product_content .tip {
+  text-align: center;
+  font-size: .28rem;
+  padding: 0 .4rem;
+  width: 100%;
+}
+.product .product_content .tip p {
+  padding-top: .2rem;
+}
+.product .product_content .tip img {
+  width: 3.5rem;
+  height: 2rem;
+  margin: .2rem auto;
+}
+.product .product_content .nav li {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  border-top: 2px solid #c74500;
+  border-bottom: 2px solid #c74500;
+}
+.product .product_content .nav li a {
+  display: block;
+  height: 0.6rem;
+  line-height: .55rem;
+  color: #fff;
+  font-size: .3rem;
+  background-color: orange;
+  border-right: 2px solid #c74500;
+}
+.product .product_content .table {
+  font-size: .3rem;
+  border-bottom: 2px solid #ccc;
+}
+.product .product_content .table td {
+  height: 0.9rem;
+  vertical-align: middle;
+}
+.product .product_content .table .tab2 {
+  display: none;
+}
+.product .product_content h3 {
+  padding: .1rem ;
+  line-height: .4rem;
+  font-size: .24rem;
+  border-bottom: 2px solid #606060;
+}
+.product .product_content .pingjia h3 {
+  background-color: #dbdbdb;
+  text-align: center;
+  color: black;
+}
+.product .product_content .pingjia .info {
+  font-size: .2rem;
+}
+.product .product_content .pingjia .info li {
+  padding: .2rem .2rem;
+  border-bottom: 1px solid #ccc;
+}
+.product .product_content .pingjia .info li p {
+  line-height: .4rem;
+  color: black;
+  font-weight: bold;
+}
+.product .product_content .pingjia .info li a {
+  display: block;
+  height: 0.6rem;
+  line-height: .6rem;
+  text-align: center;
+  background-image: linear-gradient(180deg, #fff, #ccc);
+  color: black;
+  font-size: .24rem;
+}
