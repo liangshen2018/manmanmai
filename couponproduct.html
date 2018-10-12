@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="css/coupon.css">
+  <link rel="stylesheet" href="css/couponproduct.css">
 </head>
 <body>
   <div class="mmm-container">
@@ -18,17 +19,21 @@
       <div class="right fr">
         <a href="#"><img src="images/header_app.png" alt=""></a>
       </div>
-      <h3>优惠券</h3>
+      <h3><span class="couponTitle"></span>优惠券</h3>
     </div>
  
 
 
     <!-- 渲染数据 -->
-    <div class="coupon_nav">
-        
+    <div class="mmm-product">
+        <div class="title">-点餐前出示手机中的优惠券，即可享受优惠</div>
+        <div class="info" id="product">
+          <!-- keng -->
+        </div>
+         
     </div>
   
-
+ 
 
     <!-- 底部 -->
     <div class="mmm-footer">
@@ -45,19 +50,51 @@
       </div>
     </div>
   </div>
+
+  <!-- 遮罩层 -->
+  
+  <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-body">
+            <p>One fine body&hellip;</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
 </body>
 
-<script type="text/html" id="navTmp">
-  <ul class="clearfix">
-    {{each result v i}}
-     <li><a href="couponproduct.html?couponid={{v.couponId}}&couponTitle={{v.couponTitle}}"><img src={{v.couponImg}} alt=""><p>{{v.couponTitle}}</p></a></li>
-     {{/each}}
-  </ul>
-</script>
 
+
+<script type="text/html" id="tmpProduct">
+
+  {{each result v i}}
+  <div class="info_1">
+     <a class="link" href="#">
+        <div class="left fl">
+            {{@v.couponProductImg}}
+          </div>
+          <div class="right">
+            <div class="top">
+              <span class="txt-cut">{{v.couponProductName}} </span>
+              <span></span>
+            </div>
+            <div class="center">{{v.couponProductPrice}}</div>
+            <div class="bot">
+              <span>{{v.couponProductTime}}</span>
+            </div>
+          </div>
+     </a>
+    </div>
+   {{/each}}
+</script>
 <script src="./lib/jquery/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./lib/IScroll/iscroll.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/coupon.js"></script>
+<script src="./js/couponproduct.js"></script>
 </html>

@@ -1,0 +1,17 @@
+.mmm-product .title {
+  text-align: center;
+  font-size: .24rem;
+  height: 0.7rem;
+  line-height: .7rem;
+}
+.mmm-product .center {
+  font-size: .24rem;
+  padding-top: .1rem;
+}
+.mmm-product #product .link .bot span {
+  color: red;
+  font-size: .24rem;
+}
+#myModal .modal-content {
+  margin-top: 4rem;
+}

@@ -1,0 +1,25 @@
+.coupon_nav {
+  padding: .3rem 0;
+}
+.coupon_nav li {
+  width: 33.3%;
+  float: left;
+  padding: 0 .1rem;
+  margin-bottom: .2rem;
+}
+.coupon_nav li a {
+  display: block;
+  height: 100%;
+  padding: .1rem 0;
+  border: 1px solid #ccc;
+}
+.coupon_nav li a img {
+  width: 1rem;
+  margin: 0 auto;
+}
+.coupon_nav li a p {
+  font-size: .26rem;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
