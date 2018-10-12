@@ -1,8 +1,85 @@
 
-.nav {
+.lgNav {
   
   font-size: .24rem;
-  color: black;
+  border-bottom: 5px solid #f8f8f8;
+  overflow: hidden;
+  ul {
+    width: 1000%;
+    li {
+      height: 0.8rem;
+      text-align: center;
+      float: left;
+      width: 2rem;
+      a {
+        display: inline-block;
+        line-height: .75rem;
+        color: black;
+
+        &.current {
+          border-bottom: 2px solid #d90000;
+          color: #d90000;
+        }
+      }
+    }
+  }
+
+}
+
+#product {
+  .top {
+    overflow: hidden;
+    /* 规定段落中的文本不换行 */
+    white-space: nowrap;
+    /* 溢出的文本以省略号显示 */
+    text-overflow: ellipsis;
+  }
+  .bot {
+     position: absolute;
+     bottom: 0.3rem;
+     width: 90%;
+     a:first-child {
+       border: 1px dashed #ff5e5d;
+       padding: .1rem;
+       float: left;
+       color: #ff5e5d;
+     }
+     a:last-child {
+      padding: .1rem;
+      background-color: #ff5e5d;
+      color: #fff;
+      float: right;
+     }
+  }
 
 
+  .center {
+    font-size: .3rem;
+    padding: .1rem 0;
+  }
+
+  .bar {
+    font-size: .14rem;
+     i {
+       width: 1rem;
+       display: inline-block;
+       border: 1px solid #ff5e5d;
+       border-radius: .2rem;
+       text-align: center;
+       position: relative;
+       overflow: hidden;
+       float: left;
+       em {
+         position: absolute;
+         left: 0;
+         height: 100%;
+         background-color: red;
+         
+       }
+     }
+    b {
+      color: #ff5e5d;
+      float: left
+    }
+  }
 }

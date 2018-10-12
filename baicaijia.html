@@ -23,11 +23,9 @@
 
 
     <!-- 动态获取数据 -->
-    <div class="nav">
+    <div class="lgNav">
        
-       <ul>
-         <li><a href="#">全部</a></li>
-       </ul>
+   
     </div>
     <div class="mmm-product">
 
@@ -53,34 +51,40 @@
 </body>
 
 <script type="text/html" id="navTmp">
-  
+  <ul class="clearfix">
+    {{each result v i}}
+      <li data-id={{v.titleId}}><a  href="#">{{v.title}}</a></li>
+      {{/each}}
+  </ul>
 </script>
 
 
 <script type="text/html" id="proTmp">
   {{each result v i}}
   <div class="info_1">
-       <a href="moneyctrlProduct.html?productid={{v.productId}}" class="link ">
           <div class="left fl">
-              {{@v.productImg2}}
+              {{@v.productImg}}
           </div>
           <div class="right">
             <div class="top">
-              <span>{{v.productName}} </span>
-              <span>{{v.productPinkage}}</span>
+              {{@v.productName}} 
             </div>
-            <div class="bot">
-              <span class="fl">{{v.productFrom}} | {{v.productTime}}</span>
-              <span class="fr">{{v.productComCount}}</span>
+            <div class="center">
+                {{@v.productPrice}}
+            </div>
+            {{@v.productCouponRemain}}
+            <div class="bot clearfix">
+              {{@v.productCoupon}}
+              {{@v.productHref}}
             </div>
           </div>
-       </a>
     </div>
 {{/each}}
 </script>
 
 <script src="./lib/jquery/jquery.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/IScroll/iscroll.js"></script>
 <script src="./js/common.js"></script>
 <script src="./js/baicaijia.js"></script>
 </html>
