@@ -67,6 +67,9 @@ a {
   /* 取消链接高亮 tap 轻触  */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+a:hover {
+  text-decoration: none;
+}
 /* 图片自适应 */
 img {
   width: 100%;

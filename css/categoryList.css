@@ -59,3 +59,6 @@
   font-size: .2rem;
   margin-right: .3rem;
 }
+.cate_list .product li:last-child a {
+  border: none;
+}

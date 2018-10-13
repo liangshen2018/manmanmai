@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="css/sitenav.css">
+</head>
+<body>
+  <div class="mmm-container">
+    <!-- 头部 -->
+    <div class="mmm-header">
+      <div class="left fl">
+        <a class="icon_back" href="javascript:history.back()"></a>
+      </div>
+      <div class="right fr">
+        <a href="#"><img src="images/header_app.png" alt=""></a>
+      </div>
+      <h3>商城导航</h3>
+    </div>
+
+
+    <!-- 动态获取数据 -->
+
+   <div class="site_nav">
+
+  
+
+
+
+   </div>
+
+
+
+
+    <div class="mmm-footer">
+      <div class="nav">
+        <a href="#">登入</a>
+        <a href="#">注册</a>
+        <a id="top" href="#"><img src="images/top.jpg" alt=""><span>返回顶部</span></a>
+      </div>
+      <div class="note">
+        <a class="red" href="#">手机APP下载</a>
+        <a class="hei" href="#">慢慢买手机版</a>
+        <a href="#">--掌上比价平台</a>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+<script type="text/html" id="tmp">
+
+  <ul class="clearfix">
+
+    {{each result v i }}
+      <li><a href="{{v.navHref}}">
+          <img src="{{v.navImg}}" alt="">
+          <span>{{v.navTitle}}</span>
+         </a>
+       </li>
+   {{/each}}
+   </ul>
+
+</script>
+
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/IScroll/iscroll.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/sitenav.js"></script>
+</html>

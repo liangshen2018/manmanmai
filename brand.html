@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="css/brand.css">
+</head>
+<body>
+  <div class="mmm-container">
+    <!-- 头部 -->
+    <div class="mmm-header">
+      <div class="left fl">
+        <a href="#"><img src="images/header_logo.png" alt=""></a>
+      </div>
+      <div class="right fr">
+        <a href="#"><img src="images/header_app.png" alt=""></a>
+      </div>
+    </div>
+    <!-- 搜索 -->
+    <div class="mmm-search">
+      <div class="box">
+        <input type="text" placeholder="请输入你想比价的商品">
+      </div>
+      <div class="btn">搜索</div>
+    </div>
+
+    <!-- 分类标题 -->
+    <div class="brandTitle">
+               <!-- 渲染 -->
+          <div class="title">
+              <a href="index.html">首页></a>
+              <a href="brandTitle.html">全部分类></a>
+            </div>
+          <p class="title">
+            <span class="fl nice" ></span>
+            <span class="fl">哪个牌子好</span>
+          </p> 
+         
+         <ul id="list">
+        
+         </ul> 
+
+         <p class="title">
+            <span class="fl paihang" ></span>
+            <span class="fl">产品销量排行</span>
+        </p> 
+
+
+        <div class="mmm-product">
+
+            <div class="info" id="product">
+              <!-- keng -->
+            </div>
+         
+        </div>
+        <p class="title">
+            <span class="fl pinglun" ></span>
+            <span class="fl">产品销量排行</span>
+        </p> 
+
+        <div class="pinglun_content">
+            
+           <!-- <div class="top clearfix">
+              <div class="img fl"><img src="images/pro-list-2rol-img.jpg" alt=""></div>
+               <div class="right">乐视</div> 
+           </div>
+           <div class="info">
+
+              <div class="user clearfix">
+                   <span class="fl">游湖</span>
+                   <span class="fr">游湖</span>
+              </div>
+             <p>产品销量排行产品销量排行产品销量排行产品销量排行产品销量排行产品销量排行产品销量排行产品销量排行产品销量排行产品销量排行产品销量排行产品销量排行产品销量排行产品销量排行产品销量排行产品销量排行产品销量排行产品销量排行产品销量排行</p>
+           </div>
+          -->
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- 底部 -->
+    <div class="mmm-footer">
+      <div class="nav">
+        <a href="#">登入</a>
+        <a href="#">注册</a>
+        <a id="top" href="#"><img src="images/top.jpg" alt=""><span>返回顶部</span></a>
+      </div>
+      <div class="note">
+        <a class="red" href="#">手机APP下载</a>
+        <a class="hei" href="#">慢慢买手机版</a>
+        <a href="#">--掌上比价平台</a>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+<script type="text/html" id="tmp">
+
+         <ul>
+          {{each result v i}}
+           <li><a href="brand.html?brandtitletd={{v.brandTitleId}}">{{v.brandTitle}}}</a></li>
+           {{/each}}
+         </ul>
+   
+</script>
+
+<script type="text/html" id="listTmp">
+{{each result v i}}
+
+<li>
+    <a href="#">
+      <div class="num">{{i+1}}</div>
+      <div class="info">
+        <h3>{{v.brandName}}</h3>
+        <p>{{v.brandInfo}}</p>
+      </div>
+    </a>
+  </li>
+
+  {{/each}}
+</script>
+
+<script type="text/html" id="tmpProduct">
+
+  {{each result v i}}
+  <div class="info_1">
+     <a class="link" href="moneyctrlProduct.html?productid={{v.productId}}">
+        <div class="left fl">
+            {{@v.productImg}}
+          </div>
+          <div class="right">
+            <div class="top">
+              <span>{{v.productName}} </span>
+              <span>{{v.productPinkage}}</span>
+            </div>
+            <div class="price">{{v.productPrice}}</div>
+            <div class="bot">
+              <span>{{v.productQuote}} | {{v.productCom}}</span>
+            </div>
+          </div>
+     </a>
+    </div>
+   {{/each}}
+</script>
+
+
+<script type="text/html" id="pinglunTmp">
+
+  {{each result v i}}
+  <div class="top clearfix">
+       <div class="img fl">{{@img}}</div>
+       <div class="right">{{productName}}</div> 
+   </div>
+   <div class="info">
+
+      <div class="user clearfix">
+           <span class="fl">{{v.comName}}</span>
+           <span class="fr">{{v.comTime}}</span>
+      </div>
+     <p>{{v.comContent}}</p>
+     <p>{{v.comFrom}}</p>
+   </div>
+   {{/each}}
+</script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/brand.js"></script>
+</html>

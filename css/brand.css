@@ -1,0 +1,82 @@
+.brandTitle {
+  font-size: .3rem;
+}
+.brandTitle .title {
+  height: 0.75rem;
+  line-height: .73rem;
+  padding-left: .2rem;
+  background-image: linear-gradient(180deg, #fff, #f1f1f1);
+}
+.brandTitle .title a {
+  color: black;
+}
+.brandTitle li a {
+  display: block;
+  height: 1.3rem;
+  padding-left: .8rem;
+  position: relative;
+  padding-top: .2rem;
+  border-bottom: 2px solid #ddd;
+}
+.brandTitle li a .num {
+  position: absolute;
+  left: .2rem;
+  top: .3rem;
+  background-color: #ddd;
+  padding: 0 .1rem;
+  color: #fff;
+  font-size: .24rem;
+}
+.brandTitle li a h3 {
+  color: black;
+}
+.brandTitle li a p {
+  font-size: .26rem;
+}
+.brandTitle li:first-child .num {
+  background-color: red;
+}
+.brandTitle li:nth-child(2) .num {
+  background-color: orange;
+}
+.brandTitle li:nth-child(3) .num {
+  background-color: lime;
+}
+#product .price {
+  font-size: .3rem;
+  color: red;
+  padding-top: .1rem;
+}
+#product img {
+  height: auto;
+}
+.pinglun_content .top {
+  border-top: 2px solid #ddd;
+}
+.pinglun_content .top .img {
+  width: 3rem;
+}
+.pinglun_content .top .img img {
+  width: 2.4rem;
+  height: auto;
+  margin: 0 auto;
+}
+.pinglun_content .top .right {
+  overflow: hidden;
+  padding-top: 0.2rem;
+}
+.pinglun_content .info {
+  background-color: #f8f8f8;
+  width: 95%;
+  border: 2px solid #ddd;
+  padding: .2rem;
+  margin: 0 auto;
+  margin-bottom: .3rem;
+}
+.pinglun_content .info .user {
+  padding: .1rem 0;
+  font-size: 0.24rem;
+}
+.pinglun_content .info p {
+  color: black;
+}

@@ -67,6 +67,9 @@ a {
   /* 取消链接高亮 tap 轻触  */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+a:hover {
+  text-decoration: none;
+}
 /* 图片自适应 */
 img {
   width: 100%;
@@ -252,6 +255,7 @@ i {
   min-width: 320px;
   margin: 0 auto;
   background-color: #fff;
+  overflow: hidden;
 }
 /*顶部*/
 .mmm-header {
@@ -377,7 +381,7 @@ i {
   overflow: hidden;
 }
 .mmm-product .info .info_1 .left {
-  height: 2.56rem;
+  height: 100%;
   width: 2.56rem;
   padding: .15rem;
 }
@@ -457,4 +461,34 @@ i {
 }
 .mmm-footer .note .hei {
   color: #100b06;
+}
+/*分页*/
+#page {
+  width: 90%;
+  margin: 0 auto;
+}
+#page span {
+  padding: .15rem .4rem;
+  font-size: .28rem;
+  color: black;
+}
+#page .prev,
+#page .next {
+  background-image: linear-gradient(180deg, #ccc, #fff, #ccc);
+  box-shadow: 0 2px 2px 0 #ccc;
+  border-radius: .1rem;
+}
+#page .center {
+  border: 2px solid #ddd;
+  margin-left: 1rem;
+  padding: 0;
+}
+#page .center select {
+  display: block;
+  width: 1.3rem;
+  height: 0.7rem;
+  border: none;
+  text-align: center;
+  font-size: .2rem;
+  padding-left: .4rem;
 }

@@ -1,0 +1,76 @@
+.shop_nav {
+  position: relative;
+}
+.shop_nav > .nav_title {
+  padding-right: .9rem;
+  border-bottom: 2px solid #ddd;
+}
+.shop_nav > .nav_title > li {
+  float: left;
+  width: 33.3%;
+}
+.shop_nav > .nav_title > li:last-child {
+  border-right: 2px solid #ddd;
+}
+.shop_nav > .nav_title > li > a {
+  height: 0.7rem;
+  line-height: .7rem;
+  text-align: center;
+  display: block;
+  color: black;
+  font-size: .3rem;
+}
+.shop_nav > .nav_title > li .nav_info {
+  width: 8rem;
+  position: absolute;
+  top: .72rem;
+  left: 0;
+  background-color: #fff;
+  z-index: 2;
+  display: none;
+}
+.shop_nav > .nav_title > li .nav_info li {
+  height: 0.7rem;
+  line-height: .7rem;
+  color: black;
+  font-size: .3rem;
+  border-bottom: 2px solid #ddd;
+  padding-left: .2rem;
+}
+.product_content li {
+  width: 50%;
+  float: left;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.product_content li a {
+  padding: .3rem;
+  display: block;
+  position: relative;
+}
+.product_content li img {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto;
+}
+.product_content li .title {
+  font-size: .3rem;
+  padding: .1rem 0;
+  color: black;
+  height: 1rem;
+}
+.product_content li .price {
+  font-size: .26rem;
+  color: red;
+  padding: .2rem 0;
+}
+.product_content li .from {
+  font-size: .2rem;
+  position: absolute;
+  right: .5rem;
+  bottom: .4rem;
+  padding: .1rem ;
+  background-color: orange;
+  color: #fff;
+  border-radius: 0.1rem;
+}

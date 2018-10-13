@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="css/gsproduct.css">
+</head>
+<body>
+  <div class="mmm-container">
+    <!-- 头部 -->
+    <div class="mmm-header">
+      <div class="left fl">
+        <a class="icon_back" href="javascript:history.back()"></a>
+      </div>
+      <div class="right fr">
+        <a href="#"><img src="images/header_app.png" alt=""></a>
+      </div>
+      <h3>凑单品</h3>
+
+    </div>
+
+
+    <!-- 动态获取数据 -->
+     <div class="shop_nav">
+       <ul class="nav_title clearfix">
+         <li class="shop">
+           <a href="#">京东</a>
+           <ul class="nav_info" id="info_1">
+    
+           </ul>
+          </li>
+         <li><a href="#">华北</a>
+          <ul class="nav_info" id="info_2">
+
+           </ul>
+        </li>
+         <li><a href="#">全部价格</a>
+
+          </li>
+       </ul>
+
+     
+     </div>
+
+    <div class="product_content">
+     <!-- 坑 -->
+    </div>
+    
+    <div class="mmm-footer">
+      <div class="nav">
+        <a href="#">登入</a>
+        <a href="#">注册</a>
+        <a id="top" href="#"><img src="images/top.jpg" alt=""><span>返回顶部</span></a>
+      </div>
+      <div class="note">
+        <a class="red" href="#">手机APP下载</a>
+        <a class="hei" href="#">慢慢买手机版</a>
+        <a href="#">--掌上比价平台</a>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script type="text/html" id="proTmp">
+  <ul class="clearfix">
+    {{each result v i}}
+      <li>
+        <a href="scountProduct.html?productid={{v.productId}}">
+           <img src="{{v.productImg}}" alt="">
+          <div class="title one-txt-cut">{{v.productName}}</div>
+          <div class="price one-txt-cut">{{v.productPrice}}</div>
+          <button class="from">去凑单</button>
+        </a>
+      </li>
+   {{/each}}
+  </ul>
+</script>
+
+<script type="text/html" id="navTmp_1">
+  {{each result v i}}
+
+  <li data-shopId={{v.shopId}}>{{v.shopName}}</li>
+
+  {{/each}}
+</script>
+<script type="text/html" id="navTmp_2">
+  {{each result v i}}
+
+  <li data-areaid={{v.areaId}}>{{v.areaName}}</li>
+
+  {{/each}}
+</script>
+
+
+
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/gsproduct.js"></script>
+</html>

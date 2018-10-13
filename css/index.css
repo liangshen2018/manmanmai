@@ -29,3 +29,15 @@
   font-size: .24rem;
   color: black;
 }
+.mmm-product .more {
+  width: 95%;
+  margin: .1rem auto;
+  background-image: linear-gradient(180deg, #fff, #ddd);
+}
+.mmm-product .more a {
+  display: block;
+  height: 0.7rem;
+  line-height: .7rem;
+  text-align: center;
+  font-size: 0.3rem;
+}

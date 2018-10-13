@@ -21,6 +21,9 @@
   border-bottom: 2px solid #d90000;
   color: #d90000;
 }
+#product .info_1 {
+  height: 3rem;
+}
 #product .top {
   overflow: hidden;
   /* 规定段落中的文本不换行 */
@@ -29,8 +32,7 @@
   text-overflow: ellipsis;
 }
 #product .bot {
-  position: absolute;
-  bottom: 0.3rem;
+  bottom: .3rem;
   width: 90%;
 }
 #product .bot a:first-child {

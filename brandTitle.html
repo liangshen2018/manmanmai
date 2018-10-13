@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="css/categoryList.css">
+  <link rel="stylesheet" href="css/brandTitle.css">
 </head>
 <body>
   <div class="mmm-container">
@@ -27,27 +27,11 @@
       <div class="btn">搜索</div>
     </div>
 
-   <div class="cate_list">
-     <div class="title">
+    <!-- 分类标题 -->
+    <div class="brandTitle">
 
-     </div>
-     <div class="product">
-         <!-- 模板渲染 -->
-     </div>
-   </div>
-   
-   <!-- 分页 -->
 
-   <div id="page" class="clearfix">
-     <span class="prev fl">上一页</span>
-     <span class="center fl">
-       <select name="" id="">
-
-       </select>
-     </span>
-     <span class="next fr">下一页</span>
-   </div>
-   
+    </div>
 
     <!-- 底部 -->
     <div class="mmm-footer">
@@ -65,35 +49,30 @@
     </div>
   </div>
 </body>
- 
-<script type="text/html" id="titleTmp">
-  <a href="index.html">首页></a>
-  <a href="category.html">全部分类></a>
-  <a href="categoryList.html?id={{result[0].categoryId}}">{{result[0].category}}></a>
-  <button>筛选</button>
-</script>
 
-<script type="text/html" id="proTmp">
-  <ul>
-    {{each result v i}}
-      <li>
-        <a href="product.html?id={{v.productId}}&brandName={{v.brandName}}&productCom={{v.productCom}}">
-          <div class="left fl">{{v.productImg}}</div>
-          <div class="right">
-            <p>{{v.productName}}</p>
-            <div class="price">{{v.productPrice}}</div>
-            <span>{{v.productQuote}}</span>
-            <span>{{v.productCom}}</span>
+
+<script type="text/html" id="tmp">
+        <!-- 渲染 -->
+        <div class="title">
+            <a href="index.html">首页></a>
+            <a href="#">全部分类></a>
           </div>
-        </a>
-      </li>
-      {{/each}}
-    </ul>
-
-
+         <p class="paihang">
+           热门品牌排行
+         </p> 
+        
+         <ul>
+          {{each result v i}}
+           <li><a href="brand.html?brandtitleid={{v.brandTitleId}}&titlename={{v.brandTitle}}">{{v.brandTitle}}</a></li>
+           {{/each}}
+         </ul>
+   
 </script>
+
+
+
 <script src="./lib/jquery/jquery.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/categoryList.js"></script>
+<script src="./js/brandTitle.js"></script>
 </html>

@@ -14,6 +14,8 @@ $(function () {
    success: function ( info ) {
      console.log(info);
     $('#product').html(template('tmpProduct',info))
+    
+    $('#myModal .carousel-inner').html(template('courTmp',info))
    }
  })
 
