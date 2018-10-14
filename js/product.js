@@ -2,7 +2,7 @@
 
 
 $(function () {
-  var productid = getSearch('id');
+  var productid = getSearch('productid');
   var brandName = getSearch('brandName')
   var productCom =getSearch('productCom')
   

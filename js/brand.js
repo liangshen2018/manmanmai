@@ -44,28 +44,31 @@ $.ajax({
   dataType:'json',
   success: function ( info ) {
     console.log(info);
-    $('#product').html(template('tmpProduct',info))
-    productid = info.result[0].productId
-    
-    
-    img = info.result[0].productImg
-    productName =info.result[0].productName
-    // 评论
+    console.log(info.result);
+    if(info.result.length > 0){
+      $('#product').html(template('tmpProduct',info))
+      productid = info.result[0].productId
+      
+      
+      img = info.result[0].productImg
+      productName =info.result[0].productName
+      // 评论
 
-    $.ajax({
-      url:'http://127.0.0.1:9090/api/getproductcom',
-      data:{
-        productid:productid
-      },
-      dataType:'json',
-      success:function ( info ) {
-        info.img = img
-        info.productName = productName
-        console.log(info);
-        
-        $('.pinglun_content').html(template('pinglunTmp',info))
-      }
-    })
+      $.ajax({
+        url:'http://127.0.0.1:9090/api/getproductcom',
+        data:{
+          productid:productid
+        },
+        dataType:'json',
+        success:function ( info ) {
+          info.img = img
+          info.productName = productName
+          console.log(info);
+          
+          $('.pinglun_content').html(template('pinglunTmp',info))
+        }
+      })
+    }
   }
 })
 

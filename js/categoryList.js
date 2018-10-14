@@ -3,7 +3,7 @@
 $(function () {
   
 
-  var categoryid = getSearch('id')
+  var categoryid = getSearch('categoryid')
  
 
 
@@ -17,9 +17,32 @@ $(function () {
     }
   })
 
+  $.ajax({
+    url:'http://127.0.0.1:9090/api/getproductlist',
+    data:{
+      categoryid:categoryid,
+      pageid: 1
+    },
+    dataType:'json',
+    success: function ( info ) {
+      console.log(info );
+      $('.product').html(template('proTmp',info));
+      $('.product .left').each(function (i,ele) {
+        $(this).html($(this).text())
+      })
+     
 
+      pageTotal = Math.ceil(info.totalCount / info.pagesize)
+      
+      
+      
+      page(pageTotal,'#page',render)
 
-  render()
+    
+    }
+  })
+
+  // render()
 
   function render (currentPage) {
     $.ajax({
@@ -35,15 +58,7 @@ $(function () {
         $('.product .left').each(function (i,ele) {
           $(this).html($(this).text())
         })
-       
 
-        pageTotal = Math.ceil(info.totalCount / info.pagesize)
-        
-        
-        
-        page(pageTotal,'#page',render)
-
-      
       }
     })
   

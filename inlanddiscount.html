@@ -25,7 +25,9 @@
 
     <!-- 动态获取数据 -->
     <div class="product_content">
-     <!-- 坑 -->
+       <ul class="clearfix">
+          <!-- 坑 -->
+      </ul>
     </div>
     
     <div class="mmm-footer">
@@ -45,7 +47,6 @@
 </body>
 
 <script type="text/html" id="proTmp">
-  <ul class="clearfix">
     {{each result v i}}
       <li>
         <a href="scountProduct.html?productid={{v.productId}}">
@@ -56,7 +57,6 @@
         </a>
       </li>
    {{/each}}
-  </ul>
 </script>
 
 <script src="./lib/jquery/jquery.min.js"></script>

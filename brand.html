@@ -121,7 +121,7 @@
 {{each result v i}}
 
 <li>
-    <a href="#">
+    <a href="categoryList.html?categoryid={{v.categoryId}}">
       <div class="num">{{i+1}}</div>
       <div class="info">
         <h3>{{v.brandName}}</h3>
@@ -137,7 +137,8 @@
 
   {{each result v i}}
   <div class="info_1">
-     <a class="link" href="moneyctrlProduct.html?productid={{v.productId}}">
+     <a class="link" href="product.html?productid={{v.productId}}&brandName={{v.brandName}}&productCom={{v.productCom}}
+     ">
         <div class="left fl">
             {{@v.productImg}}
           </div>
