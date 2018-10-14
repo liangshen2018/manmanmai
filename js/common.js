@@ -40,57 +40,81 @@ function getSearch(k) {
 
 
 //分页
-function page(pageTotal, ele,render) {
+// pageTotal 总页数
+// ele 选择器
+// render 函数  render(currentPage)
+// pageSize 开始显示第几页 默认 第一页
+function page(pageTotal, ele,render,currentPage) {
+
+  
+   first()
+
+   function first() {
+       
+      currentPage = currentPage || 1
 
 
 
-  var htmlStr = ''
+      if ($(ele).find('option').length == 0) {
+        var htmlStr = ''
 
-  if ($(ele).find('option').length == 0) {
-
-    for (var i = 1; i <= pageTotal; i++) {
-      htmlStr += '<option value=' + i + '>' + i + '/' + pageTotal + '</option>'
-    }
-    $(ele).find('select').html(htmlStr)
-
-    currentPage = 1
-
-
-  }
+        for (var i = 1; i <= pageTotal; i++) {
+          htmlStr += '<option value=' + i + '>' + i + '/' + pageTotal + '</option>'
+        }
+          $(ele).find('select').html(htmlStr)
+          $(ele).find('option')[currentPage - 1].selected = true
+          render(currentPage)
 
 
+           //  上一页
+          $(ele).find('.prev').click(function () {
+            if (currentPage == 1) {
+              return;
+            }
+            console.log('上一页');
 
 
-  console.log(currentPage);
+            currentPage--
+
+            render(currentPage)
+            $(ele).find('option')[currentPage - 1].selected = true
+
+
+            $(window).scrollTop(0)
+            
+          })
+
+        // 下一页
+          $(ele).find('.next').click(function () {
+
+
+            if (currentPage == pageTotal) {
+              return;
+            }
+
+            currentPage++
+            console.log('下一页');
+
+
+            render(currentPage)
+            $(ele).find('option')[currentPage - 1].selected = true;
+            $(window).scrollTop(0)
+          })
+
+        //  选择页
+        $(ele).find('select').change(function () {
+
+          
+          currentPage  =  $(this).val()
+          render(currentPage)
+          $(window).scrollTop(0)
+        })
 
 
 
-  $(ele).find('.prev').click(function () {
-    if (currentPage == 1) {
-      return;
-    }
-    console.log('上一页');
+      }
+      
+    
+   }
 
-
-    currentPage--
-
-    render(currentPage)
-    $(ele).find('option')[currentPage - 1].selected = true
-  })
-
-  $(ele).find('.next').click(function () {
-
-
-    if (currentPage == pageTotal) {
-      return;
-    }
-
-    currentPage++
-    console.log('下一页');
-
-
-    render(currentPage)
-    $(ele).find('option')[currentPage - 1].selected = true;
-    return false;
-  })
 }
